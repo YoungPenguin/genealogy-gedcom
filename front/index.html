@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DODODODO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Rozha+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Oswald|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper centerContent ">
+    <section class="container">
+      <section data-aos="fade-right" class="fileLogPanel">
+      </section>
+      <div class="boxwrapper centerContent">
+        <div class="box sidebar centerContent">
+          <textarea  id="statusTextAreaID" rows="4">-> This will be your status panel.</textarea>
+        </div>
+        <div class="table-responsive table1-responsive setTopPadding standardPadding">
+          <table class="table table-bordered fileLogTable standardPadding">
+            <thead>
+              <tr class="">
+                <th>File Name</th>
+                <th>Source</th>
+                <th>GEDCOM Version</th>
+                <th>Encoding</th>
+                <th>Submitter Name</th>
+                <th>Submitter Address</th>
+                <th>Number of Individuals</th>
+                <th>Number of Families</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="">
+                <th>NA</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+    <div class="btn-toolbar  setTopPadding centerContent standardPadding" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <a class="btn btn-primary" href="#createGedcomID">Create GEDCOM</a>
+      </div>
+      <div class="btn-group mr-2 centerContent" role="group" aria-label="Second group">
+        <a class="btn btn-primary" href="#addIndiID">Add Individual</a>
+
+      </div>
+    </div>
+    <select class="gedcomFileSelection dropdown-toggle btn-secondary btn" id="gedcomFileSelection">
+      <option disabled selected>Select File</option>
+    </select>
+
+    <section class="gedcomPanel standardPadding">
+      <div class="table-responsive table2-responsive gedcomScroll centerContent">
+        <table class="table table-bordered indiTable ">
+          <thead>
+            <tr class="">
+              <th>#</th>
+              <th>Given Name</th>
+              <th>Surname</th>
+              <th>Sex</th>
+              <th>Family Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="">
+              <th>NA</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="btn-toolbar  setTopPadding centerContent" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <a class="btn btn-primary" href="#ancestorsID">Get Ancestors</a>
+      </div>
+      <div class="btn-group mr-2 centerContent" role="group" aria-label="Second group">
+        <a class="btn btn-primary" href="#descendantsID">Get Descendants</a>
+
+      </div>
+    </div>
+
+  </div>
+  <section class="centerContent">
+    <div class="table-responsive outputTable table3-responsive table-inverse centerContent">
+      <table class="table table-bordered genTable" id="genTableID">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>List of Generation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!--***** input popups ******-->
+
+  <section id="createGedcomID" class="overlay">
+    <div class="popupDisplay centerContent">
+      <h2 class="titlePadding setBold">CREATE GEDCOM</h2>
+      <a class="closePopup" href="#close">&times;</a>
+      <div class="popupInfo standardPadding setBold">
+        <p>File Name:</p>
+        <input class="fileNameCreateGed"></input>
+        <p>ter Name:</p>
+        <input class="subNameCreateGed"></input>
+        <p>ter Address:</p>
+        <input class="subAddressCreateGed"></input>
+      </div>
+      <div class="standardPadding setWhite setTimesNewRomanFont">
+        <a class="btn setButtonDarkRed createGedcom" href="#close">Add</a>
+        <a class="btn setButtonDarkRed" href="#close">Cancel</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="addIndiID" class="overlay">
+    <div class="popupDisplay centerContent">
+      <h2 class="titlePadding setBold">ADD INDIVIDUAL</h2>
+      <a class="closePopup" href="#close">&times;</a>
+      <p>Choose file: <select class="indiFileSelection" id="indiFileSelection">
+        <option disabled selected>Select File</option>
+      </select></p>
+      <div class="popupInfo standardPadding setBold">
+        <p>First Name:</p>
+        <input class="addIndiFirstName"></input>
+        <p>Last Name:</p>
+        <input class="addIndiLastname"></input>
+      </div>
+      <div class="standardPadding setWhite setTimesNewRomanFont">
+        <a class="btn setButtonDarkRed addIndividual" href="#close">Add</a>
+        <a class="btn setButtonDarkRed" href="#close">Cancel</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ancestorsID" class="overlay">
+    <div class="popupDisplay centerContent">
+      <h2 class="titlePadding setBold ">SEARCH ANCESTORS</h2>
+      <a class="closePopup" href="#close">&times;</a>
+      <p>Choose file: <select class="anceFileSelection" id="anceFileSelection">
+        <option disabled selected>Select File</option>
+      </select></p>
+      <div class="popupInfo standardPadding setBold">
+        <p>First Name:</p>
+        <input class="firstNameInputAnce"></input>
+        <p>Last Name:</p>
+        <input class="lastNameInputAnce"></input>
+        <p>Number of Generation:</p>
+        <input class="numGenInputAnce"></input>
+      </div>
+      <div class="standardPadding setWhite setTimesNewRomanFont">
+        <a class="btn setButtonDarkRed searchAnce" href="#genTableID">Search</a>
+        <a class="btn setButtonDarkRed" href="#close">Cancel</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="descendantsID" class="overlay">
+    <div class="popupDisplay centerContent">
+      <h2 class="titlePadding setBold ">SEARCH DESCENDANTS</h2>
+      <a class="closePopup" href="#close">&times;</a>
+      <p>Choose file: <select class="descFileSelection" id="descFileSelection">
+        <option disabled selected>Select File</option>
+      </select></p>
+
+      <div class="popupInfo standardPadding setBold">
+        <p>First Name:</p>
+        <input class="firstNameInputDesc"></input>
+        <p>Last Name:</p>
+        <input class="lastNameInputDesc"></input>
+        <p>Number of Generation:</p>
+        <input class="numGenInputDesc"></input>
+      </div>
+      <div class="standardPadding setWhite setTimesNewRomanFont">
+        <a class="btn setButtonDarkRed searchDesc" href="#genTableID">Search</a>
+        <a class="btn setButtonDarkRed" href="#close">Cancel</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="standardPadding"></section></div>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+<!--  <section id="loginID" class="overlay">
+<div class="popupDisplay centerContent">
+<h2 class="titlePadding setBold ">LOGIN</h2>
+<a id="closeID" class="closePopup" href="#close">&times;</a>
+<div class="popupInfo standardPadding setBold">
+<p>User Name:</p>
+<input id="userID"></input>
+<p>Password:</p>
+<input type="password" id="passID"></input>
+<p>Data base</p>
+<input id="dbaseID"></input>
+</div>
+<div class="standardPadding setWhite setTimesNewRomanFont">
+<a class="btn setButtonDarkRed setAnimateScroll" href="#dataBaseID" id="loginButtonID">Login</a>
+<a class="btn setButtonDarkRed" href="#close">Cancel</a>
+</div>
+</div>
+</section>
+<section id="queryPopupID" class="overlay">
+<div class="popupDisplay centerContent">
+<h2 class="titlePadding setBold ">CHOOSE QUERY</h2>
+<p>Choose file:</p>
+<select class="queryFileSelection" id="queryFileSelection">
+<option disabled selected>Select File</option>
+</select>
+<div class="standardPadding setWhite setTimesNewRomanFont">
+<a class="btn setButtonDarkRed" href="#close" id="queryPopupButtonID">Okay</a>
+</div>
+</div>
+</section>
+<section id="popupHelpID" class="overlay">
+<div class="popupDisplay centerContent">
+<h2 class="titlePadding setBold ">HELP</h2>
+<a class="closePopup" href="#close">&times;</a>
+<p>CHOOSE A TABLE:</p>
+<div class="standardPadding"><a class="btn setButtonDarkRed" id="describeIndiID" href="#closeID">DESCRIBE FILE;</a></div>
+<div class="standardPadding"><a class="btn setButtonDarkRed" id="describeFileID" href="#closeID">DESCRIBE INDIVIDUAL;</a></div>
+
+</div>
+</section> -->

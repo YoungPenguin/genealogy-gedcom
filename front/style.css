@@ -1,0 +1,249 @@
+body {
+  margin: 40px;
+  padding: 0 auto;
+  height: 100%;
+  width: 100%;
+  -webkit-text-size-adjust: 50%;
+  font-size: 80%;
+
+}
+textarea {
+  background-color: #F5F5F5;
+  height: 350px;
+  width: 340px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+        "content "
+        "test "
+        "header "
+        "content2 "
+        "footer ";
+width: 50%;
+    }
+    .centerContent {
+      font-weight: 300;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+.box {
+float: left;
+  border-radius: 5px;
+  font-size: 150%;
+}
+.fright{
+  float: right;
+}
+.header,
+.footer {
+
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.table1-responsive {
+  float: right;
+  height:350px;
+  width: 60%;
+}
+
+.table2-responsive {
+  margin: auto;
+  height:380px;
+  width: 100%;
+}
+.table3-responsive {
+  margin-top: 100px;
+  height:580px;
+  width: 50%;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+}
+
+.header {
+  grid-area: header;
+}
+.test {
+  grid-area: test;
+}
+.footer {
+  grid-area: footer;
+}
+.content2 {
+  grid-area: content2;
+}
+.gedcomFileSelection{
+  width: 20%;
+  float: right;
+}
+
+.fillPage{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.standardLayout{
+   top: 100;
+   position: static;
+   width: 100%;
+   background: white;
+   padding-top: 2em;
+   padding-bottom: 2em;
+   font-size: 110%;
+   z-index: 0;
+}
+.titlePadding{
+   padding-bottom: 0.9em;
+}
+.standardPadding{
+   padding-top: 1em;
+   padding-bottom: 1em;
+}
+.noUnderline{
+   text-decoration: none !important;
+}
+.setRelativePosition{
+   position: relative;
+}
+.setWidthToMax{
+   min-width: 100%;
+}
+.setBottomPadding{
+   padding-bottom: 3em;
+}
+.setTopPadding{
+   padding-top: 5px;
+}
+
+h1 {
+    border-bottom: 2px solid black;
+    text-align: left;
+    font-size: 30px;
+    }
+    .h20 {
+      text-align: center;
+          font-size: 30px;
+    }
+    h3 {
+      text-align: center;
+    }
+
+
+
+/***********************************/
+.overlay {
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: 100ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popupInfo p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.popupDisplay {
+    top: -10%;
+    text-align: center;
+    z-index: 21;
+    right: 0;
+    left: 0;
+    margin: 10% auto;
+    max-width: 30em;
+    padding: 50px;
+    padding-bottom: 10px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+.popupDisplay h2 {
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.popupDisplay .closePopup {
+    position: absolute;
+    text-decoration: none;
+    top: -10px;
+    right: 10px;
+    transition: all 100ms;
+    font-size: 35px;
+    font-weight: bold;
+    color: darkred;
+    transition: all 0.3s ease-in-out;
+}
+.popupDisplay .closePopup:hover {
+    color: red;
+}
+.popupDisplay .content{
+    max-height: 30%;
+    overflow: auto;
+}
+
+/**********************************/
+
+ @media screen and (max-width: 1280px){
+    .navigationBar{
+        font-size: 90%;
+    }
+    .navigationButton a{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .navigationBar{
+        font-size: 90%;
+    }
+    .navigationButton a{
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+}
