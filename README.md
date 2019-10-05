@@ -19,6 +19,12 @@ the praser will hopefully be left as is.
 
 Just keep this in mind if you are looking at this as inspiration for your project 
 
+## The praser
+So this is a GEDCOM file praser, the documentation for GEDCOM can be found [here](http://www.daubnet.com/ftp/gedcom-55-english.pdf)
+Decoding and displaying GEDCOM Version, Encoding, submitter name, adress, count etc. 
+
+The praser it self is written in C
+
 ## How to use
 This is node so you need to install node in the root directory and then start the server like:
 ### how to.....
