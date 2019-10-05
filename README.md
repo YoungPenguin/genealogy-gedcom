@@ -10,10 +10,10 @@ https://johnpapa.net/shifting-your-node-express-apis-to-serverless/
 
 ### WARNING
 
-This mean that bugs can occur due to commits with half-finished code... ya sorry... i always save to my gitgub
+This mean that bugs can occur due to commits with half-finished code... ya sorry... i always save to my github
 The changes will be in the entire front end, and in the node back-end app.js
 
-So the database i still in the app.js but is taken down, if you want to use it you can just comment it in and input it in the html again 
+So the database is still in the app.js and index.js but is taken down, if you want to use it you can just comment it in and input it in the html again 
 
 the praser will hopefully be left as is.
 
