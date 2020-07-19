@@ -3,7 +3,7 @@ This project is a Computer Science course project from the course known as "The 
 NOTE!!! that i'm NOT attending University of Guelph, i did NOT take this course. I got the description of the assignment from a guy on reddit
 
 ## Before you continue!!!
-This is back in development!!!
+This is **back in development!!!**
 i'm converting from MySQL database to Oracle.
 
 After i will go serverless. read more about this [here](https://johnpapa.net/shifting-your-node-express-apis-to-serverless/)
